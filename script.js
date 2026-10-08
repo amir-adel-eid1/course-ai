@@ -374,7 +374,7 @@ function showSuccessModal(lead) {
         </div>
         <div class="modal-summary-item">
             <span>مسؤولة الـ HR المتابعة:</span>
-            <strong style="color: #25d366;">01012668128</strong>
+            <strong style="color: #25d366;">متاحة عبر واتساب فوراً</strong>
         </div>
     `;
 
@@ -404,7 +404,7 @@ function sendToHRWhatsApp() {
 💻 *توفر جهاز كمبيوتر:* ${lead.hasDevice}
 🎯 *الهدف من التدريب:* ${lead.notes}
 --------------------------------------
-يرجى تأكيد تسجيل مقعدي وإرسال رابط قاعة المحاضرة وتفاصيل المتابعة. شكراً جزيلاً مسؤولة الموارد البشرية!`;
+يرجى تأكيد تسجيل مقعدي وإرسال رابط قاعة المحاضرة وتفاصيل المتابعة. شكراً جزيلاً مسؤولة الـ HR!`;
 
     const encodedMsg = encodeURIComponent(message);
     const waUrl = `https://wa.me/${HR_PHONE}?text=${encodedMsg}`;
@@ -416,7 +416,7 @@ function sendToHRWhatsApp() {
 
 function openDirectWhatsApp() {
     const defaultMsg = 
-`مرحباً مسؤولة الموارد البشرية (HR)، أود معرفة تفاصيل بخصوص البرنامج.`;
+`مرحباً مسؤولة الـ HR، أود معرفة تفاصيل بخصوص البرنامج.`;
     const waUrl = `https://wa.me/${HR_PHONE}?text=${encodeURIComponent(defaultMsg)}`;
     window.open(waUrl, "_blank");
 }
@@ -469,7 +469,7 @@ function processAIResponse(userInput) {
 
     if (lower.includes("جمعة") || lower.includes("مجاني") || lower.includes("موعد") || lower.includes("محاضرة")) {
         reply = `📅 <strong>محاضرة الجمعة المجانية</strong> هي جلسة تفاعلية أونلاين 100% مجانية، الهدف منها إنك تشوف أسلوب التدريب العملي بنفسك وتتعرف على إمكانيات الذكاء الاصطناعي في تخصصك قبل ما تاخد قرارك. 
-        <br><br>👉 تقدر تسجل اسمك فيها فوراً من خلال استمارة الحجز بالموقع أو التواصل مع مسؤولة الـ HR على <strong>01012668128</strong>.`;
+        <br><br>👉 تقدر تسجل اسمك فيها فوراً من خلال استمارة الحجز بالموقع أو التواصل مباشرة مع مسؤولة الـ HR عبر واتساب.`;
     } 
     else if (lower.includes("أدوات") || lower.includes("ادوات") || lower.includes("بريميوم") || lower.includes("اشتراك") || lower.includes("premium")) {
         reply = `🔥 <strong>الأدوات مش مجرد شرح نظري!</strong><br>
@@ -481,8 +481,7 @@ function processAIResponse(userInput) {
         2. كمان هيتم اختيار <strong>شخصين مميزين</strong> سلموا Real Project وطبقوا بجدية، وهيكون ليهم <strong>تكريم خاص ودعم ومساندة حقيقية في تطوير مشروعهم</strong> من البرنامج والمدرب!`;
     } 
     else if (lower.includes("hr") || lower.includes("تواصل") || lower.includes("واتساب") || lower.includes("رقم")) {
-        reply = `📞 مسؤولة الموارد البشرية والقبول جاهزة للرد عليك على مدار اليوم:<br>
-        📱 رقم الواتساب: <strong>01012668128</strong><br><br>
+        reply = `📞 مسؤولة الـ HR جاهزة للرد عليك وتوضيح كافة التفاصيل:<br><br>
         <button class="chip-btn" style="background: #25d366; color: #fff; margin-top:5px;" onclick="openDirectWhatsApp()">اضغط هنا لفتح واتساب الـ HR مباشرة</button>`;
     } 
     else if (lower.includes("تخصص") || lower.includes("مناسب") || lower.includes("مجال") || lower.includes("قانون") || lower.includes("تسويق") || lower.includes("برمجة")) {
@@ -493,7 +492,7 @@ function processAIResponse(userInput) {
     } 
     else {
         reply = `أهلاً بك! برنامج الذكاء الاصطناعي مع <strong>م. أمير عادل عيد</strong> مبني على منهجية (Ideas • Design • Automate • Grow). 
-        تقدر تسجل حضورك في <strong>محاضرة الجمعة المجانية</strong> من استمارة الحجز في الصفحة، أو تتواصل مباشرة مع مسؤولة الـ HR على <strong>01012668128</strong> للاستفسار عن أي تفاصيل خاصة بمجالك!`;
+        تقدر تسجل حضورك في <strong>محاضرة الجمعة المجانية</strong> من استمارة الحجز في الصفحة، أو تتواصل مباشرة مع مسؤولة الـ HR عبر واتساب للاستفسار عن أي تفاصيل خاصة بمجالك!`;
     }
 
     setTimeout(() => {
