@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>برنامج احتراف الذكاء الاصطناعي الشامل | م. أمير عادل عيد</title>
+    <meta name="description" content="البرنامج التدريبي التطبيقي الشامل في الذكاء الاصطناعي - تعلم، طبق، واربط الـAI بمجالك وحقق دخلاً حقيقياً مع أدوات بريميوم وشهادات معتمدة.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="برنامج احتراف الذكاء الاصطناعي الشامل | م. أمير عادل عيد">
+    <meta property="og:description" content="انضم لأقوى تدريب عملي للذكاء الاصطناعي. احجز مقعدك في المحاضرة المجانية يوم الجمعة!">
+    <meta property="og:image" content="assets/instructor.jpg">
+    
+    <!-- Google Fonts: Cairo & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Ambient Glowing Background Elements -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- Announcement Bar for Free Friday Session -->
+    <div class="announcement-bar">
+        <div class="container announcement-content">
+            <span class="badge-pulse"><i class="fa-solid fa-sparkles"></i> فرصة استثنائية</span>
+            <p>محاضرة تعريفية وتطبيقية <strong>مجانية 100%</strong> يوم الجمعة القادم - احضر وجرب بنفسك أسلوب التدريب!</p>
+            <a href="#register-section" class="btn-sm-glow">احجز مقعدك المجاني الآن</a>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">
+                <img src="assets/logo.jpg" alt="Amir Adel Eid AI Logo" class="nav-logo-img">
+                <div class="brand-text">
+                    <span class="brand-name">AMIR ADEL EID</span>
+                    <span class="brand-tagline">AI Engineer & Creative Technologist</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">عن البرنامج</a></li>
+                <li><a href="#phases" class="nav-link">مراحل التدريب</a></li>
+                <li><a href="#fields" class="nav-link">تخصصك والـAI</a></li>
+                <li><a href="#premium-tools" class="nav-link">الأدوات البريميوم</a></li>
+                <li><a href="#friday-lecture" class="nav-link special-link">محاضرة الجمعة</a></li>
+                <li><a href="#certificates" class="nav-link">الشهادات والدعم</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="nav-socials">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-nav-btn fb-nav" title="صفحة الفيسبوك">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/amir_adel_eid?stkn=dWM1cDFqN3FiMmFq" target="_blank" rel="noopener noreferrer" class="social-nav-btn ig-nav" title="حساب الإنستغرام">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <a href="#register-section" class="btn-primary-glow">
+                    <i class="fa-solid fa-id-card-clip"></i> انضم للتدريب
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="القائمة">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="tag-icon"><i class="fa-solid fa-microchip"></i></span>
+                    <span>التدريب الأكثر شمولاً وتطبيقاً لعام 2026</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    البرنامج مش مجرد كورس نظري.. <br>
+                    <span class="gradient-text">هنا هتتعلم، تطبق، وتغير طريقة شغلك بالذكاء الاصطناعي</span>
+                </h1>
+
+                <p class="hero-description">
+                    مش هتاخد شوية معلومات وتنسى! خطة متكاملة هدفها التأهيل الحقيقي، مع اشتراكات 
+                    <strong>Premium</strong> حصرية، ربط مباشر بتخصصك، وإمكانية حقيقية لتحقيق دخل وتقديم خدمات مبتكرة.
+                </p>
+
+                <!-- Value Props Bullet Pills -->
+                <div class="hero-pills">
+                    <span class="pill"><i class="fa-solid fa-circle-check"></i> تأسيس من الصفر بدون تعقيد</span>
+                    <span class="pill"><i class="fa-solid fa-circle-check"></i> أدوات واشتراكات Premium للمتدربين</span>
+                    <span class="pill"><i class="fa-solid fa-circle-check"></i> شهادات تخصصية + دعم لمشروعين فائزين</span>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="#register-section" class="btn-hero-primary">
+                        <i class="fa-solid fa-rocket"></i> احجز مقعدك بالتدريب
+                    </a>
+                    <a href="#friday-lecture" class="btn-hero-secondary">
+                        <i class="fa-solid fa-calendar-day"></i> تفاصيل محاضرة الجمعة المجانية
+                    </a>
+                    <button class="btn-hero-whatsapp" id="heroWhatsAppBtn" onclick="openDirectWhatsApp()">
+                        <i class="fa-brands fa-whatsapp"></i> تواصل مع مسؤولة الـ HR
+                    </button>
+                </div>
+
+                <!-- Quick Trust Metrics -->
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">مراحل تأهيلية متدرجة</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">+10</span>
+                        <span class="stat-label">أدوات AI Premium مجانية</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">تطبيق عملي ومشاريع حقيقية</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="visual-card">
+                    <div class="neon-ring-wrapper">
+                        <img src="assets/instructor.jpg" alt="المهندس أمير عادل عيد" class="hero-instructor-img">
+                        <div class="neon-circle-glow"></div>
+                    </div>
+                    <div class="floating-badge badge-top">
+                        <i class="fa-solid fa-brain"></i>
+                        <div>
+                            <strong>AMIR ADEL EID</strong>
+                            <span>AI Engineer & Creative Technologist</span>
+                        </div>
+                    </div>
+                    <div class="floating-badge badge-bottom">
+                        <i class="fa-solid fa-award"></i>
+                        <div>
+                            <strong>تكريم ودعم كامل</strong>
+                            <span>لأفضل مشروعين مطبقين</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PROGRAM PILLARS LOGOS SECTION -->
+    <section class="program-pillars-section" id="program-pillars">
+        <div class="container">
+            <div class="pillars-wrapper">
+                
+                <!-- Logo 3 (Right in Arabic RTL - AI Projects) -->
+                <div class="pillar-container pillar-3">
+                    <div class="pillar-bg"></div>
+                </div>
+
+                <div class="pillar-divider"></div>
+
+                <!-- Logo 2 (Center - AI Tools) -->
+                <div class="pillar-container pillar-2">
+                    <div class="pillar-bg"></div>
+                </div>
+
+                <div class="pillar-divider"></div>
+
+                <!-- Logo 1 (Left in Arabic RTL - AI Mastery) -->
+                <div class="pillar-container pillar-1">
+                    <div class="pillar-bg"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- COUNTDOWN & FREE FRIDAY LECTURE SECTION -->
+    <section class="friday-section" id="friday-lecture">
+        <div class="container">
+            <div class="friday-card">
+                <div class="friday-badge">
+                    <i class="fa-solid fa-gift"></i> فرصة استكشافية حصرية
+                </div>
+                <div class="friday-grid">
+                    <div class="friday-info">
+                        <h2>وعشان مش عايزينك تاخد قرارك لمجرد إعلان...</h2>
+                        <h3 class="highlight-cyan">عملنا محاضرة مجانية 100% يوم الجمعة القادم!</h3>
+                        <p>
+                            تحضر، تتعرف على طريقة التدريب، وتشوف بنفسك المحتوى والأسلوب العملي اللي هنشتغل بيه، 
+                            وتكتشف إمكانيات الذكاء الاصطناعي الحقيقية في تخصصك.. 
+                            <strong>وبعدها تقرر بكل راحة</strong> إذا كنت حابب تكمل البرنامج الكامل أو تختار التخصص الأنسب ليك.
+                        </p>
+
+                        <div class="friday-features">
+                            <div class="friday-feat-item">
+                                <i class="fa-solid fa-video"></i>
+                                <span>محاضرة أونلاين تفاعلية لايف مع م. أمير عادل</span>
+                            </div>
+                            <div class="friday-feat-item">
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
+                                <span>مجانية تماماً بدون أي التزام مسبق</span>
+                            </div>
+                            <div class="friday-feat-item">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>جلسة إجابة على جميع استفسارات المتدربين</span>
+                            </div>
+                        </div>
+
+                        <div class="friday-action-box">
+                            <a href="#register-section" class="btn-friday-action" onclick="setFormGoal('free_friday')">
+                                <i class="fa-solid fa-clipboard-check"></i> سجل اسمك في المحاضرة المجانية الآن
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="countdown-box">
+                        <h4><i class="fa-solid fa-hourglass-half"></i> متبقي على بدء المحاضرة المجانية:</h4>
+                        <div class="countdown-timer" id="countdownTimer">
+                            <div class="time-block">
+                                <span class="time-num" id="cd-days">02</span>
+                                <span class="time-unit">أيام</span>
+                            </div>
+                            <span class="colon">:</span>
+                            <div class="time-block">
+                                <span class="time-num" id="cd-hours">14</span>
+                                <span class="time-unit">ساعات</span>
+                            </div>
+                            <span class="colon">:</span>
+                            <div class="time-block">
+                                <span class="time-num" id="cd-minutes">35</span>
+                                <span class="time-unit">دقائق</span>
+                            </div>
+                            <span class="colon">:</span>
+                            <div class="time-block">
+                                <span class="time-num" id="cd-seconds">48</span>
+                                <span class="time-unit">ثواني</span>
+                            </div>
+                        </div>
+                        <div class="seats-counter">
+                            <i class="fa-solid fa-users"></i>
+                            <span>المقاعد المتاحة مجاناً محدودة لضمان جودة التفاعل والردود!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT INSTRUCTOR & PHILOSOPHY -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">رؤية التدريب ومحرك التميز</span>
+                <h2 class="section-title">ليه البرنامج ده مش كورس تقليدي؟</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc">
+                    لأننا شغالين على Plan متكاملة ومختلفة، هدفها التأهيل الحقيقي وبناء مهارات تقدر تستخدمها من تاني يوم بعد التدريب مباشرة.
+                </p>
+            </div>
+
+            <div class="philosophy-grid">
+                <div class="philo-card">
+                    <div class="philo-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h3>IDEAS</h3>
+                    <h4>توليد أفكار استثنائية</h4>
+                    <p>تعلم كيفية توظيف نماذج الذكاء الاصطناعي كشريك تفكير استراتيجي يوسع مداركك ويخلق حلولاً غير تقليدية لأعقد المشاكل.</p>
+                </div>
+
+                <div class="philo-card">
+                    <div class="philo-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <h3>DESIGN</h3>
+                    <h4>تصميم وتطوير احترافي</h4>
+                    <p>استخدام أدوات التوليد البصري والهندسي وصياغة الأوامر الاحترافية Prompt Engineering لإنتاج أعمال بجودة عالمية.</p>
+                </div>
+
+                <div class="philo-card">
+                    <div class="philo-icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3>AUTOMATE</h3>
+                    <h4>أتمتة المهام وتوفير الوقت</h4>
+                    <p>بناء سير عمل رقمي يقوم بأداء المهام الروتينية والمملة آلياً، لتضاعف إنتاجيتك وتنجز في ساعة ما كنت تفعله في أيام.</p>
+                </div>
+
+                <div class="philo-card highlight-border">
+                    <div class="philo-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>GROW</h3>
+                    <h4>نمو حقيقي وعائد مادي</h4>
+                    <p>تحويل المعرفة إلى فرص وظيفية، عملاء جدد، ومنتجات رقمية تدر عليك عائداً مادياً حقيقياً ومستداماً.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE THREE PHASES (مراحل البرنامج التدريبي الثلاثة) -->
+    <section class="phases-section" id="phases">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">منهجية العمل المحكمة</span>
+                <h2 class="section-title">رحلتك في التدريب مقسمة إلى 3 مراحل محورية</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="phases-timeline">
+                <!-- المرحلة الأولى -->
+                <div class="phase-card">
+                    <div class="phase-number-box">
+                        <span class="phase-step">المرحلة 01</span>
+                        <div class="phase-icon"><i class="fa-solid fa-seedling"></i></div>
+                    </div>
+                    <div class="phase-content">
+                        <h3>التأسيس من الصفر</h3>
+                        <p class="phase-lead">بناء الفهم العميق والركائز الأساسية للذكاء الاصطناعي بدون مصطلحات معقدة.</p>
+                        <ul class="phase-checklist">
+                            <li><i class="fa-solid fa-check"></i> نبدأ معاك من البداية خالص ونبني فهم حقيقي لماهية الذكاء الاصطناعي وكيف يفكر.</li>
+                            <li><i class="fa-solid fa-check"></i> التعرف على أهم النماذج التوليدية (LLMs & Multi-modal models).</li>
+                            <li><i class="fa-solid fa-check"></i> هندسة الأوامر المتقدمة (Prompt Engineering) للحصول على أفضل النتائج الدقيقة.</li>
+                            <li><i class="fa-solid fa-check"></i> كسر حاجز الخوف من التقنية والبدء الفعلي في التعامل العملي مع الأدوات.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- المرحلة الثانية -->
+                <div class="phase-card active-pulse">
+                    <div class="phase-number-box">
+                        <span class="phase-step">المرحلة 02</span>
+                        <div class="phase-icon"><i class="fa-solid fa-network-wired"></i></div>
+                    </div>
+                    <div class="phase-content">
+                        <h3>ربط الـ AI بتخصصك ومجالك</h3>
+                        <p class="phase-lead">مش هنتعلم AI بشكل عام وبس! التخصيص الكامل حسب طبيعة شغلك اليومي.</p>
+                        <ul class="phase-checklist">
+                            <li><i class="fa-solid fa-check"></i> تحليل طبيعة مجالك وكيف يمكن للذكاء الاصطناعي أن يكون مساعدك الشخصي الخارق.</li>
+                            <li><i class="fa-solid fa-check"></i> حل مشكلات حقيقية تواجهك في وظيفتك أو عملك الحر يومياً.</li>
+                            <li><i class="fa-solid fa-check"></i> ورش عمل متخصصة لكل قطاع (تسويق، قانون، برمجة، إدارة، تصميم...).</li>
+                            <li><i class="fa-solid fa-check"></i> تحسين جودة المخرجات وسرعة الإنجاز بنسبة تتجاوز 400%.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- المرحلة الثالثة -->
+                <div class="phase-card">
+                    <div class="phase-number-box">
+                        <span class="phase-step">المرحلة 03</span>
+                        <div class="phase-icon"><i class="fa-solid fa-sack-dollar"></i></div>
+                    </div>
+                    <div class="phase-content">
+                        <h3>تحقيق دخل واستثمار المهارات</h3>
+                        <p class="phase-lead">الانتقال من مرحلة مستخدم للأدوات إلى رائد أعمال ومقدم خدمات محترف.</p>
+                        <ul class="phase-checklist">
+                            <li><i class="fa-solid fa-check"></i> إزاي تحوّل استخدام الأدوات إلى خدمات جاهزة تُباع للعملاء والشركات.</li>
+                            <li><i class="fa-solid fa-check"></i> تطوير شغلك الحالي وزيادة قيمتك التنافسية في سوق العمل وترقيتك.</li>
+                            <li><i class="fa-solid fa-check"></i> خلق فرص دخل حقيقية من منصات العمل الحر (Freelancing) وبناء المنتجات.</li>
+                            <li><i class="fa-solid fa-check"></i> بناء وتسليم مشروع حقيقي متكامل (Real Project) كـ Portfolio قوي يثبت مهارتك.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FIELDS & SPECIALIZATIONS (ربط الـ AI بتخصصك) -->
+    <section class="fields-section" id="fields">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">لكل قطاع وتخصص</span>
+                <h2 class="section-title">كيف يخدم البرنامج مجالك واختصاصك؟</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc">
+                    مهما كان مجالك أو دراستك، الذكاء الاصطناعي أصبح هو المحرك الأول للنمو.. اختر مجالك لتشاهد التأثير:
+                </p>
+            </div>
+
+            <div class="fields-tabs">
+                <button class="field-tab-btn active" data-field="marketing"><i class="fa-solid fa-bullhorn"></i> التسويق والمبيعات</button>
+                <button class="field-tab-btn" data-field="legal"><i class="fa-solid fa-scale-balanced"></i> القانون والمحاماة</button>
+                <button class="field-tab-btn" data-field="programming"><i class="fa-solid fa-code"></i> البرمجة وتكنولوجيا المعلومات</button>
+                <button class="field-tab-btn" data-field="design"><i class="fa-solid fa-palette"></i> التصميم والميديا</button>
+                <button class="field-tab-btn" data-field="management"><i class="fa-solid fa-briefcase"></i> الإدارة والـ HR</button>
+                <button class="field-tab-btn" data-field="content"><i class="fa-solid fa-pen-nib"></i> صناعة المحتوى والكتابة</button>
+                <button class="field-tab-btn" data-field="education"><i class="fa-solid fa-graduation-cap"></i> التعليم والتدريب</button>
+            </div>
+
+            <div class="field-tab-content active" id="fieldContentBox">
+                <!-- Dynamically populated or rendered based on selection -->
+                <div class="field-detail-card">
+                    <div class="field-detail-header">
+                        <div class="field-icon-wrapper"><i class="fa-solid fa-bullhorn"></i></div>
+                        <div>
+                            <h3 id="fieldTitle">التسويق، الإعلانات، وبناء العلامات التجارية</h3>
+                            <p id="fieldSubtitle">حول حملاتك التسويقية إلى مكائن نمو فائقة الدقة والسرعة</p>
+                        </div>
+                    </div>
+                    <div class="field-points-grid" id="fieldPoints">
+                        <div class="point-box">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <strong>تحليل سلوك الجمهور والمنافسين</strong>
+                            <span>استخراج ثغرات السوق وصياغة استراتيجيات محكمة في دقائق.</span>
+                        </div>
+                        <div class="point-box">
+                            <i class="fa-solid fa-pen-fancy"></i>
+                            <strong>كتابة إعلانات وإيميلات عالية التحويل</strong>
+                            <span>صياغة نصوص بيعية مقنعة تناسب كل شريحة عملاء بدقة.</span>
+                        </div>
+                        <div class="point-box">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <strong>توليد محتوى مرئي وحملات سريعة</strong>
+                            <span>إنشاء صور، بنرات وفيديوهات إعلانية باستخدام أدوات الذكاء الاصطناعي التوليدي.</span>
+                        </div>
+                        <div class="point-box">
+                            <i class="fa-solid fa-robot"></i>
+                            <strong>أتمتة الردود ومتابعة العملاء المحتملين</strong>
+                            <span>بناء شات بوت تسويقي يتابع العملاء على مدار الساعة بدون توقف.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM TOOLS SECTION (الأدوات البريميوم) -->
+    <section class="tools-section" id="premium-tools">
+        <div class="container">
+            <div class="tools-banner">
+                <div class="tools-badge"><i class="fa-solid fa-fire"></i> والأهم... الأدوات مش مجرد شرح!</div>
+                <h2>اشتراكات وأدوات Premium حقيقية بين إيديك للتطبيق المباشر</h2>
+                <p>
+                    هيكون متاح ليكم مجموعة قوية من الأدوات والاشتراكات البريميوم تشتغلوا عليها بنفسكم وتطبقوا من خلالها أثناء التدريب،
+                    بحيث يكون التعلم <strong>عملي 100%</strong> مش مجرد مشاهدة محاضرات سلبية!
+                </p>
+            </div>
+
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-head">
+                        <div class="tool-icon-bg"><i class="fa-solid fa-comments"></i></div>
+                        <span class="tool-tier">Premium Access</span>
+                    </div>
+                    <h4>أدوات الذكاء التوليدي المتقدم</h4>
+                    <p>الوصول لأقوى نماذج التفكير والتحليل مثل ChatGPT Plus & Claude 3.5 Sonnet لمعالجة النصوص والتحليلات المعقدة.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-head">
+                        <div class="tool-icon-bg"><i class="fa-solid fa-image"></i></div>
+                        <span class="tool-tier">Creative Tier</span>
+                    </div>
+                    <h4>أدوات التوليد البصري والتصميم</h4>
+                    <p>أحدث إصدارات Midjourney و DALL-E لإنتاج صور فوتوغرافية وتصميمات تسويقية وتصاميم سوشيال ميديا خارقة.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-head">
+                        <div class="tool-icon-bg"><i class="fa-solid fa-clapperboard"></i></div>
+                        <span class="tool-tier">Video & Audio</span>
+                    </div>
+                    <h4>أدوات الصوت والفيديو بالذكاء الاصطناعي</h4>
+                    <p>توليد أصوات واقعية عبر ElevenLabs وفيديوهات سينمائية وصناع محتوى افتراضيين عبر Runway & HeyGen.</p>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-head">
+                        <div class="tool-icon-bg"><i class="fa-solid fa-bolt"></i></div>
+                        <span class="tool-tier">Automation</span>
+                    </div>
+                    <h4>منصات الأتمتة والإنتاجية</h4>
+                    <p>أدوات ربط الأنظمة وأتمتة المهام اليومية (Make, Zapier, AI Agents) لتحويل عملك اليومي لنظام يعمل ذاتياً.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATES & EXCLUSIVE SUPPORT (الشهادات والتكريم) -->
+    <section class="certificates-section" id="certificates">
+        <div class="container">
+            <div class="cert-showcase-box">
+                <div class="cert-info">
+                    <div class="cert-pill"><i class="fa-solid fa-trophy"></i> في نهاية التدريب</div>
+                    <h2>شهادة معتمدة باسم تخصصك.. وتكريم استثنائي للمتميزين!</h2>
+                    <p>
+                        كل متدرب يجتاز متطلبات التدريب هيحصل على شهادة رسمية باسم التخصص والمجال اللي تدرب وطبق عليه فعلياً.
+                    </p>
+
+                    <div class="grand-prize-card">
+                        <div class="grand-prize-header">
+                            <i class="fa-solid fa-medal"></i>
+                            <div>
+                                <h3>اختيار شخصين متميزين من المشاركين</h3>
+                                <span>للذين طبقوا بجدية وسلموا Project حقيقي مبني على ما تعلموه</span>
+                            </div>
+                        </div>
+                        <div class="grand-benefits-list">
+                            <div class="benefit-tag"><i class="fa-solid fa-star"></i> 🏅 تكريم وتقدير خاص في نهاية الدورة</div>
+                            <div class="benefit-tag"><i class="fa-solid fa-rocket"></i> 🚀 دعم استراتيجي مباشر من البرنامج والمدرب</div>
+                            <div class="benefit-tag"><i class="fa-solid fa-handshake-angle"></i> 🤝 مساندة فنية وتقنية لتطوير وتوسيع المشروع</div>
+                        </div>
+                    </div>
+
+                    <div class="quote-box">
+                        <i class="fa-solid fa-quote-right quote-icon"></i>
+                        <p>«هدفنا مش إنك تخلص الكورس وتنساه... هدفنا إنك تخرج قادر تشتغل وتطبق وتغيّر طريقة شغلك وتفتح لنفسك أبواب دخل حقيقية.»</p>
+                        <span class="quote-author">- م. أمير عادل عيد</span>
+                    </div>
+                </div>
+
+                <div class="cert-mockup-wrapper">
+                    <div class="cert-visual-card">
+                        <div class="cert-border-inner">
+                            <div class="cert-header-mock">
+                                <img src="assets/logo.jpg" alt="Logo" class="cert-logo">
+                                <div>
+                                    <h5>CERTIFICATE OF COMPLETION</h5>
+                                    <small>برنامج الذكاء الاصطناعي التطبيقي التخصصي</small>
+                                </div>
+                            </div>
+                            <div class="cert-body-mock">
+                                <p>يشهد البرنامج بأن المتدرب أتم بنجاح متطلبات التطبيق العملي والمشاريع في تخصص:</p>
+                                <div class="cert-field-badge">المجال التخصصي والتطبيقات المتقدمة</div>
+                                <div class="cert-footer-mock">
+                                    <div class="cert-sign">
+                                        <span>Amir Adel Eid</span>
+                                        <small>المحاضر ومدرب البرنامج</small>
+                                    </div>
+                                    <div class="cert-stamp">
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                        <span>معتمد</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGISTRATION & BOOKING FORM SECTION (فورم الانضمام والحجز الشامل) -->
+    <section class="registration-section" id="register-section">
+        <div class="container">
+            <div class="reg-header">
+                <span class="section-subtitle">ابدأ خطوتك القادمة الآن</span>
+                <h2 class="section-title">استمارة الانضمام وحجز المقعد في البرنامج</h2>
+                <div class="title-underline"></div>
+                <p class="section-desc">
+                    سجل بياناتك بدقة أدناه. سيتم معالجة طلبك وإرسال تأكيد الحجز فوراً عبر واتساب مع 
+                    <strong>مسؤولة الموارد البشرية (HR)</strong> برقم: <a href="tel:01012668128" class="phone-link">01012668128</a>
+                </p>
+            </div>
+
+            <div class="form-wrapper">
+                <div class="form-container-card">
+                    <!-- Progress / Notice -->
+                    <div class="form-top-alert">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>يمكنك اختيار حضور المحاضرة المجانية يوم الجمعة، أو التقدم المباشر للبرنامج الكامل أو كلاهما!</span>
+                    </div>
+
+                    <form id="aiBookingForm" onsubmit="handleFormSubmit(event)">
+                        <div class="form-grid">
+                            <!-- Full Name -->
+                            <div class="form-group">
+                                <label for="fullName"><i class="fa-solid fa-user"></i> الاسم الكامل (ثلاثي) <span class="req">*</span></label>
+                                <input type="text" id="fullName" name="fullName" required placeholder="مثال: أحمد محمد علي" class="form-control">
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div class="form-group">
+                                <label for="phoneNumber"><i class="fa-solid fa-phone"></i> رقم الهاتف المحمول <span class="req">*</span></label>
+                                <input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="مثال: 01xxxxxxxxx" class="form-control">
+                            </div>
+
+                            <!-- WhatsApp Number -->
+                            <div class="form-group">
+                                <label for="whatsappNumber"><i class="fa-brands fa-whatsapp"></i> رقم الواتساب (للتواصل وإرسال التفاصيل) <span class="req">*</span></label>
+                                <input type="tel" id="whatsappNumber" name="whatsappNumber" required placeholder="مثال: 01xxxxxxxxx" class="form-control">
+                            </div>
+
+                            <!-- City / Country -->
+                            <div class="form-group">
+                                <label for="location"><i class="fa-solid fa-location-dot"></i> المحافظة / الدولة <span class="req">*</span></label>
+                                <input type="text" id="location" name="location" required placeholder="مثال: القاهرة / الإسكندرية / خارج مصر" class="form-control">
+                            </div>
+
+                            <!-- Specialization / Field -->
+                            <div class="form-group">
+                                <label for="fieldSelect"><i class="fa-solid fa-briefcase"></i> مجالك أو تخصصك الحالي <span class="req">*</span></label>
+                                <select id="fieldSelect" name="fieldSelect" required class="form-control" onchange="toggleOtherField(this.value)">
+                                    <option value="" disabled selected>-- اختر تخصصك لربطه بالتدريب --</option>
+                                    <option value="تسويق ومبيعات (Marketing & Sales)">تسويق ومبيعات (Marketing & Sales)</option>
+                                    <option value="قانون ومحاماة (Legal & Law)">قانون ومحاماة (Legal & Law)</option>
+                                    <option value="برمجة وتكنولوجيا (Coding & IT)">برمجة وتكنولوجيا (Coding & IT)</option>
+                                    <option value="تصميم وجرافيك وميديا (Design & Media)">تصميم وجرافيك وميديا (Design & Media)</option>
+                                    <option value="إدارة أعمال وموارد بشرية (Management & HR)">إدارة أعمال وموارد بشرية (Management & HR)</option>
+                                    <option value="صناعة محتوى وكتابة إعلانية (Content Creation)">صناعة محتوى وكتابة إعلانية (Content Creation)</option>
+                                    <option value="تعليم وتدريس وبحث علمي (Education & Academic)">تعليم وتدريس وبحث علمي (Education & Academic)</option>
+                                    <option value="طب وصيدلة ومجال صحي (Healthcare & Medical)">طب وصيدلة ومجال صحي (Healthcare & Medical)</option>
+                                    <option value="هندسة وتصميم معماري (Engineering & Architecture)">هندسة وتصميم معماري (Engineering & Architecture)</option>
+                                    <option value="طالب جامعي / خريج جديد (Student / Fresh Graduate)">طالب جامعي / خريج جديد (Student / Fresh Graduate)</option>
+                                    <option value="أخرى">تخصص آخر (سأقوم بكتابته)</option>
+                                </select>
+                            </div>
+
+                            <!-- Other Field Input (Hidden by default) -->
+                            <div class="form-group" id="otherFieldGroup" style="display: none;">
+                                <label for="otherField"><i class="fa-solid fa-pen"></i> اكتب تخصصك هنا بالتفصيل</label>
+                                <input type="text" id="otherField" name="otherField" placeholder="مثال: الترجمة، المحاسبة المالية، إلخ" class="form-control">
+                            </div>
+
+                            <!-- Booking Type -->
+                            <div class="form-group full-width">
+                                <label class="label-heading"><i class="fa-solid fa-ticket"></i> نوع الحجز المطلوب <span class="req">*</span></label>
+                                <div class="booking-options">
+                                    <label class="radio-card">
+                                        <input type="radio" name="bookingType" value="محاضرة الجمعة المجانية الاستكشافية" checked>
+                                        <div class="radio-content">
+                                            <div class="radio-title"><i class="fa-solid fa-star"></i> حجز المحاضرة المجانية يوم الجمعة</div>
+                                            <p>أريد حضور المحاضرة الاستكشافية المجانية أولاً للتعرف على طريقة التدريب والمحتوى.</p>
+                                        </div>
+                                    </label>
+
+                                    <label class="radio-card">
+                                        <input type="radio" name="bookingType" value="البرنامج التدريبي الكامل (المراحل الثلاث)">
+                                        <div class="radio-content">
+                                            <div class="radio-title"><i class="fa-solid fa-gem"></i> الانضمام للبرنامج التدريبي الكامل</div>
+                                            <p>أريد الالتحاق المباشر بالبرنامج التدريبي الكامل وحجز الأدوات البريميوم والشهادة.</p>
+                                        </div>
+                                    </label>
+
+                                    <label class="radio-card">
+                                        <input type="radio" name="bookingType" value="محاضرة الجمعة + تأكيد أسبقية بالبرنامج الكامل">
+                                        <div class="radio-content">
+                                            <div class="radio-title"><i class="fa-solid fa-rocket"></i> كلاهما معاً (الجمعة + أسبقية البرنامج)</div>
+                                            <p>حضور محاضرة الجمعة وتثبيت أسبقية في قائمة المقبولين بالبرنامج الكامل.</p>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Device Availability -->
+                            <div class="form-group">
+                                <label for="hasDevice"><i class="fa-solid fa-laptop"></i> هل يتوفر لديك لابتوب أو كمبيوتر للتطبيق العملي؟ <span class="req">*</span></label>
+                                <select id="hasDevice" name="hasDevice" required class="form-control">
+                                    <option value="نعم يتوفر لابتوب / كمبيوتر">نعم يتوفر لدي لابتوب / كمبيوتر</option>
+                                    <option value="أعتمد على الهاتف والتابلت">أعتمد حالياً على الهاتف / التابلت</option>
+                                    <option value="سأوفره قبل بدء التدريب">سأوفره قبل بدء مراحل التطبيق</option>
+                                </select>
+                            </div>
+
+                            <!-- Goal / Notes -->
+                            <div class="form-group">
+                                <label for="notes"><i class="fa-solid fa-comment-dots"></i> ما هو هدفك الأساسي من التدريب؟ (اختياري)</label>
+                                <input type="text" id="notes" name="notes" placeholder="مثال: زيادة إنتاجيتي، تقديم خدمات فريلانس، تطوير مشروعي..." class="form-control">
+                            </div>
+                        </div>
+
+                        <!-- Direct WhatsApp Automation Info -->
+                        <div class="hr-routing-box">
+                            <div class="hr-routing-icon">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div class="hr-routing-info">
+                                <strong>التواصل مع مسؤولة الـ HR</strong>
+                                <p>بمجرد الضغط على زر الإرسال، سيتم حفظ طلبك وتوجيهك فوراً برسالة جاهزة ومنسقة إلى مسؤولة الموارد البشرية عبر واتساب (<strong>01012668128</strong>) لتأكيد حضورك وإرسال رابط القاعة الخاصة.</p>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-submit-container">
+                            <button type="submit" class="btn-submit-main" id="submitBtn">
+                                <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> إرسال الحجز فقط</span>
+                                <span class="btn-spinner" style="display: none;"><i class="fa-solid fa-circle-notch fa-spin"></i> جاري التجهيز...</span>
+                            </button>
+                            <small class="secure-text"><i class="fa-solid fa-lock"></i> بياناتك آمنة وسرية 100% وتستخدم حصراً للتنسيق معك.</small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS MODAL POPUP -->
+    <div class="modal-backdrop" id="successModal">
+        <div class="modal-card">
+            <div class="modal-icon-success">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3>تم تسجيل طلبك بنجاح! 🎉</h3>
+            <p id="modalUserMsg">أهلاً بك معنا! تم حفظ بياناتك بنجاح، والآن جاهزون لتحويلك لمسؤولة الموارد البشرية (HR) لتأكيد مقعدك.</p>
+            
+            <div class="modal-summary" id="modalSummaryBox">
+                <!-- Injected via JavaScript -->
+            </div>
+
+            <div class="modal-buttons">
+                <button class="btn-modal-wa" id="modalWhatsAppBtn" onclick="sendToHRWhatsApp()">
+                    <i class="fa-brands fa-whatsapp"></i> الانتقال لواتساب مسؤولة الـ HR فوراً
+                </button>
+                <button class="btn-modal-close" onclick="closeModal()">إغلاق النافذة</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- AI INTERACTIVE ASSISTANT WIDGET (المساعد الذكي السريع) -->
+    <div class="ai-widget-container" id="aiWidget">
+        <!-- Floating Toggle Button -->
+        <button class="ai-fab-btn" id="aiFabBtn" onclick="toggleAIChat()" aria-label="المساعد الذكي">
+            <div class="ai-fab-icon">
+                <i class="fa-solid fa-robot"></i>
+                <span class="online-indicator"></span>
+            </div>
+            <span class="ai-fab-label">اسأل المساعد الذكي للبرنامج</span>
+        </button>
+
+        <!-- Chat Window -->
+        <div class="ai-chat-window" id="aiChatWindow">
+            <div class="ai-chat-header">
+                <div class="ai-chat-header-info">
+                    <div class="ai-avatar">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div>
+                        <strong>المساعد الذكي للتدريب</strong>
+                        <span>جاهز للرد عليك وتوجيهك لمسؤولة الـ HR</span>
+                    </div>
+                </div>
+                <button class="ai-chat-close" onclick="toggleAIChat()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="ai-chat-body" id="aiChatBody">
+                <div class="chat-message bot-msg">
+                    <div class="bubble">
+                        أهلاً بك! 👋 أنا المساعد الذكي لبرنامج احتراف الذكاء الاصطناعي مع <strong>م. أمير عادل عيد</strong>. 
+                        أقدر أساعدك في معرفة تفاصيل التدريب، مواعيد محاضرة الجمعة المجانية، الأدوات البريميوم، أو ربطك مباشرة بمسؤولة الـ HR (01012668128).
+                    </div>
+                </div>
+                <div class="quick-chips">
+                    <button class="chip-btn" onclick="sendQuickQuestion('ما هي تفاصيل محاضرة الجمعة المجانية؟')">محاضرة الجمعة المجانية؟</button>
+                    <button class="chip-btn" onclick="sendQuickQuestion('ما هي الأدوات البريميوم المتاحة؟')">الأدوات البريميوم؟</button>
+                    <button class="chip-btn" onclick="sendQuickQuestion('كيف يفيد التدريب تخصصي؟')">هل التدريب مناسب لمجالي؟</button>
+                    <button class="chip-btn" onclick="sendQuickQuestion('أريد التواصل مع مسؤولة الـ HR الآن')">تواصل مع الـ HR</button>
+                </div>
+            </div>
+
+            <div class="ai-chat-footer">
+                <div class="chat-input-row">
+                    <input type="text" id="aiUserInput" placeholder="اكتب سؤالك هنا..." onkeypress="handleChatKeyPress(event)">
+                    <button class="btn-chat-send" onclick="sendUserChatMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUICK FLOATING WHATSAPP BUTTON (مسؤولة الـ HR) -->
+    <a href="https://wa.me/201012668128?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%85%D8%B3%D8%A4%D9%88%D9%84%D8%A9%20%D8%A7%D9%84%D9%85%D9%88%D8%A7%D8%B1%D8%AF%20%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D9%8A%D8%A9%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D9%88%D8%AD%D8%AC%D8%B2%20%D9%85%D9%82%D8%B9%D8%AF%20%D9%81%D9%8A%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1%20%D8%A7%D9%84%D8%A7%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A%20%D9%85%D8%B9%20%D9%85.%20%D8%A3%D9%85%D9%8A%D8%B1%20%D8%B9%D8%A7%D8%AF%D9%84" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="floating-hr-whatsapp" 
+       title="تواصل مباشر مع مسؤولة الـ HR عبر واتساب">
+        <i class="fa-brands fa-whatsapp"></i>
+        <div class="hr-tooltip">
+            <strong>مسؤولة الـ HR</strong>
+            <span>01012668128</span>
+        </div>
+    </a>
+
+    <!-- ADMIN / HR DASHBOARD MODAL TRIGGER (Secret/Convenient button at bottom) -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <img src="assets/logo.jpg" alt="Logo" class="footer-logo">
+                <p>برنامج احتراف الذكاء الاصطناعي الشامل - رؤية متقدمة لتأهيل الكوادر وربط الذكاء الاصطناعي بسوق العمل الحقيقي.</p>
+                <div class="footer-socials">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-btn fb-footer" title="صفحة الفيسبوك"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/amir_adel_eid?stkn=dWM1cDFqN3FiMmFq" target="_blank" rel="noopener noreferrer" class="social-btn ig-footer" title="حساب الإنستغرام"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/201012668128" target="_blank" rel="noopener noreferrer" class="social-btn wa-footer" title="واتساب مسؤولة الـ HR"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="tel:01012668128" class="social-btn phone-footer" title="اتصال مباشر"><i class="fa-solid fa-phone"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#about">عن البرنامج والمدرب</a></li>
+                    <li><a href="#phases">مراحل التدريب الثلاثة</a></li>
+                    <li><a href="#friday-lecture">محاضرة الجمعة المجانية</a></li>
+                    <li><a href="#premium-tools">الأدوات البريميوم</a></li>
+                    <li><a href="#register-section">استمارة التسجيل</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>التواصل ومسؤولة الـ HR</h4>
+                <p><i class="fa-solid fa-headset"></i> مسؤولة الموارد البشرية: <strong>01012668128</strong></p>
+                <p><i class="fa-solid fa-calendar-check"></i> مواعيد العمل: متاح للتسجيل والرد 24/7</p>
+                <p><i class="fa-solid fa-location-dot"></i> أونلاين - تفاعلي مباشر لجميع المحافظات والدول</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>© 2026 جميع الحقوق محفوظة - برنامج الذكاء الاصطناعي | م. أمير عادل عيد (Amir Adel Eid).</p>
+                <p class="tagline-eng">Ideas • Design • Automate • Grow</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
