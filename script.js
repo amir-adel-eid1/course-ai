@@ -312,32 +312,55 @@ function handleFormSubmit(e) {
         createdAt: new Date().toLocaleString("ar-EG")
     };
 
-    // Save lead to local storage
+    // Save lead to local storage (for admin record)
     saveLead(leadObject);
     currentLeadData = leadObject;
 
-    // Simulate short processing for feedback
+    // Build the structured WhatsApp message with all user details
+    const message = 
+`🌟 *طلب انضمام وحجز في برنامج الذكاء الاصطناعي* 🌟
+(مع المدرب: م. أمير عادل عيد)
+--------------------------------------
+👤 *الاسم الكريم:* ${fullName}
+📱 *رقم الهاتف:* ${phoneNumber}
+💬 *رقم الواتساب:* ${whatsappNumber}
+📍 *المحافظة / الدولة:* ${location}
+💼 *التخصص والمجال:* ${field}
+🎫 *نوع الحجز المطلوب:* ${bookingType}
+💻 *توفر جهاز كمبيوتر:* ${hasDevice}
+🎯 *الهدف من التدريب:* ${notes}
+--------------------------------------
+يرجى تأكيد تسجيل مقعدي وإرسال رابط قاعة المحاضرة وتفاصيل المتابعة. شكراً جزيلاً!`;
+
+    const encodedMsg = encodeURIComponent(message);
+    const waUrl = `https://wa.me/${HR_PHONE}?text=${encodedMsg}`;
+
+    // Fire celebration confetti
+    if (typeof confetti === "function") {
+        confetti({
+            particleCount: 120,
+            spread: 80,
+            origin: { y: 0.6 }
+        });
+    }
+
+    // Direct WhatsApp sending immediately without extra confirmation step
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isMobile) {
+        window.location.href = waUrl;
+    } else {
+        window.open(waUrl, "_blank");
+    }
+
+    // Reset UI state & form
     setTimeout(() => {
         btnText.style.display = "inline-flex";
         btnSpinner.style.display = "none";
         submitBtn.disabled = false;
 
-        // Fire celebration confetti
-        if (typeof confetti === "function") {
-            confetti({
-                particleCount: 100,
-                spread: 70,
-                origin: { y: 0.6 }
-            });
-        }
-
-        // Show Success Modal
-        showSuccessModal(leadObject);
-
-        // Reset form
         document.getElementById("aiBookingForm").reset();
         document.getElementById("otherFieldGroup").style.display = "none";
-    }, 600);
+    }, 800);
 }
 
 function saveLead(lead) {
@@ -373,7 +396,7 @@ function showSuccessModal(lead) {
             <strong style="color: var(--neon-cyan);">${lead.bookingType}</strong>
         </div>
         <div class="modal-summary-item">
-            <span>مسؤولة الـ HR المتابعة:</span>
+            <span>التواصل مع الـ HR:</span>
             <strong style="color: #25d366;">متاحة عبر واتساب فوراً</strong>
         </div>
     `;
@@ -404,7 +427,7 @@ function sendToHRWhatsApp() {
 💻 *توفر جهاز كمبيوتر:* ${lead.hasDevice}
 🎯 *الهدف من التدريب:* ${lead.notes}
 --------------------------------------
-يرجى تأكيد تسجيل مقعدي وإرسال رابط قاعة المحاضرة وتفاصيل المتابعة. شكراً جزيلاً مسؤولة الـ HR!`;
+يرجى تأكيد تسجيل مقعدي وإرسال رابط قاعة المحاضرة وتفاصيل المتابعة. شكراً جزيلاً!`;
 
     const encodedMsg = encodeURIComponent(message);
     const waUrl = `https://wa.me/${HR_PHONE}?text=${encodedMsg}`;
@@ -469,7 +492,7 @@ function processAIResponse(userInput) {
 
     if (lower.includes("جمعة") || lower.includes("مجاني") || lower.includes("موعد") || lower.includes("محاضرة")) {
         reply = `📅 <strong>محاضرة الجمعة المجانية</strong> هي جلسة تفاعلية أونلاين 100% مجانية، الهدف منها إنك تشوف أسلوب التدريب العملي بنفسك وتتعرف على إمكانيات الذكاء الاصطناعي في تخصصك قبل ما تاخد قرارك. 
-        <br><br>👉 تقدر تسجل اسمك فيها فوراً من خلال استمارة الحجز بالموقع أو التواصل مباشرة مع مسؤولة الـ HR عبر واتساب.`;
+        <br><br>👉 تقدر تسجل اسمك فيها فوراً من خلال استمارة الحجز بالموقع أو بدء التواصل مع الـ HR عبر واتساب.`;
     } 
     else if (lower.includes("أدوات") || lower.includes("ادوات") || lower.includes("بريميوم") || lower.includes("اشتراك") || lower.includes("premium")) {
         reply = `🔥 <strong>الأدوات مش مجرد شرح نظري!</strong><br>
@@ -481,8 +504,8 @@ function processAIResponse(userInput) {
         2. كمان هيتم اختيار <strong>شخصين مميزين</strong> سلموا Real Project وطبقوا بجدية، وهيكون ليهم <strong>تكريم خاص ودعم ومساندة حقيقية في تطوير مشروعهم</strong> من البرنامج والمدرب!`;
     } 
     else if (lower.includes("hr") || lower.includes("تواصل") || lower.includes("واتساب") || lower.includes("رقم")) {
-        reply = `📞 مسؤولة الـ HR جاهزة للرد عليك وتوضيح كافة التفاصيل:<br><br>
-        <button class="chip-btn" style="background: #25d366; color: #fff; margin-top:5px;" onclick="openDirectWhatsApp()">اضغط هنا لفتح واتساب الـ HR مباشرة</button>`;
+        reply = `📞 لبدء التواصل مع الـ HR والرد على كافة استفساراتك:<br><br>
+        <button class="chip-btn" style="background: #25d366; color: #fff; margin-top:5px;" onclick="openDirectWhatsApp()">اضغط هنا لبدء التواصل مع الـ HR عبر واتساب</button>`;
     } 
     else if (lower.includes("تخصص") || lower.includes("مناسب") || lower.includes("مجال") || lower.includes("قانون") || lower.includes("تسويق") || lower.includes("برمجة")) {
         reply = `🎯 البرنامج مصمم خصيصاً علشان يربط الـ AI بمجالك أياً كان (تسويق، قانون، برمجة، تصميم، إدارة وHR، محتوى، تعليم...). ومش محتاج أي خلفية برمجية مسبقة، لأن المرحلة الأولى بتبدأ معاك بالتأسيس من الصفر!`;
@@ -492,7 +515,7 @@ function processAIResponse(userInput) {
     } 
     else {
         reply = `أهلاً بك! برنامج الذكاء الاصطناعي مع <strong>م. أمير عادل عيد</strong> مبني على منهجية (Ideas • Design • Automate • Grow). 
-        تقدر تسجل حضورك في <strong>محاضرة الجمعة المجانية</strong> من استمارة الحجز في الصفحة، أو تتواصل مباشرة مع مسؤولة الـ HR عبر واتساب للاستفسار عن أي تفاصيل خاصة بمجالك!`;
+        تقدر تسجل حضورك في <strong>محاضرة الجمعة المجانية</strong> من استمارة الحجز في الصفحة، أو بدء التواصل مع الـ HR عبر واتساب للاستفسار عن أي تفاصيل خاصة بمجالك!`;
     }
 
     setTimeout(() => {
