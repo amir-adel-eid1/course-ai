@@ -416,7 +416,7 @@ function sendToHRWhatsApp() {
 
 function openDirectWhatsApp() {
     const defaultMsg = 
-`مرحباً مسؤولة الـ HR، أود معرفة تفاصيل بخصوص البرنامج.`;
+`مرحبا اود معرفة تفاصيل بخصوص البرنامج`;
     const waUrl = `https://wa.me/${HR_PHONE}?text=${encodeURIComponent(defaultMsg)}`;
     window.open(waUrl, "_blank");
 }
