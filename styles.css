@@ -2514,14 +2514,16 @@ select.form-control option {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+    gap: 3%;
+    flex-wrap: nowrap; /* Ensures they stay side-by-side always */
+    width: 100%;
 }
 
 .pillar-container {
     position: relative;
-    width: 290px;
-    height: 290px;
+    flex: 1 1 0; /* Grow and shrink equally based on available space */
+    max-width: 290px;
+    aspect-ratio: 1 / 1; /* Keeps them perfectly circular */
     border-radius: 50%;
     border: 5px solid #d4af37;
     box-shadow: 
@@ -2534,43 +2536,48 @@ select.form-control option {
 }
 
 .pillar-container:hover {
-    transform: scale(1.05) translateY(-10px);
+    transform: scale(1.05) translateY(-5px);
     border-color: #ffd700;
     box-shadow: 
         0 0 40px rgba(255, 215, 0, 0.5),
         inset 0 0 30px rgba(255, 215, 0, 0.5),
-        0 20px 40px rgba(0, 0, 0, 0.8);
+        0 15px 30px rgba(0, 0, 0, 0.8);
 }
 
 .pillar-bg {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 870px;
-    height: 290px;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 100%;
     background-image: url('assets/program-logos.jpg');
-    background-size: 870px 290px;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 
-/* Precise cropping for the 3 logos */
-.pillar-3 .pillar-bg { transform: translate(-16.66%, -50%); } /* Right Logo (AI Projects) */
-.pillar-2 .pillar-bg { transform: translate(-50%, -50%); }    /* Center Logo (AI Tools) */
-.pillar-1 .pillar-bg { transform: translate(-83.33%, -50%); } /* Left Logo (AI Mastery) */
+/* Responsive cropping: 
+   Left: 0 (shows 1st third), -100% (2nd third), -200% (3rd third) */
+.pillar-1 .pillar-bg { left: 0%; }       /* AI Mastery (Left Logo) */
+.pillar-2 .pillar-bg { left: -100%; }    /* AI Tools (Center Logo) */
+.pillar-3 .pillar-bg { left: -200%; }    /* AI Projects (Right Logo) */
 
 .pillar-divider {
     width: 3px;
-    height: 150px;
+    height: 15vw;
+    max-height: 150px;
     background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.5), transparent);
     border-radius: 50%;
 }
 
-@media (max-width: 992px) {
-    .pillar-divider {
-        display: none;
+@media (max-width: 768px) {
+    .program-pillars-section {
+        padding: 30px 0;
     }
-    .pillars-wrapper {
-        flex-direction: column;
-        gap: 40px;
+    .pillar-container {
+        border-width: 2px;
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    }
+    .pillar-divider {
+        width: 1px;
     }
 }
