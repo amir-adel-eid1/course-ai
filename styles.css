@@ -2409,7 +2409,7 @@ select.form-control option {
     text-decoration: none;
 }
 
-/* RESPONSIVE BREAKPOINTS */
+/* RESPONSIVE BREAKPOINTS & FULL MOBILE OPTIMIZATION */
 @media (max-width: 1024px) {
     .hero-container {
         grid-template-columns: 1fr;
@@ -2439,6 +2439,15 @@ select.form-control option {
 }
 
 @media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+
     .nav-links {
         display: none;
         position: absolute;
@@ -2456,15 +2465,76 @@ select.form-control option {
     .mobile-toggle {
         display: block;
     }
+
     .hero-title {
-        font-size: 2.1rem;
+        font-size: 1.85rem;
+        line-height: 1.35;
     }
+    .hero-description {
+        font-size: 1rem;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+    .btn-hero-primary, 
+    .btn-hero-secondary, 
+    .btn-hero-whatsapp {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        padding: 14px 20px;
+    }
+
     .friday-grid {
         grid-template-columns: 1fr;
     }
+    .friday-card {
+        padding: 24px 16px;
+    }
+    .countdown-box {
+        padding: 20px 12px;
+        width: 100%;
+    }
+    .countdown-timer {
+        gap: 4px;
+        justify-content: center;
+    }
+    .time-block {
+        min-width: 52px;
+        padding: 8px 6px;
+    }
+    .time-num {
+        font-size: 1.4rem;
+    }
+    .time-unit {
+        font-size: 0.68rem;
+    }
+    .colon {
+        font-size: 1.2rem;
+    }
+
+    .program-pillars-section {
+        padding: 35px 0;
+    }
+    .pillars-wrapper {
+        gap: 8px;
+        padding: 0 5px;
+    }
+    .pillar-container {
+        border-width: 3px;
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    }
+    .pillar-divider {
+        width: 2px;
+        height: 45px;
+        flex-shrink: 0;
+    }
+
     .phase-card {
         grid-template-columns: 1fr;
-        padding: 25px;
+        padding: 20px 16px;
     }
     .phase-number-box {
         border-left: none;
@@ -2495,8 +2565,37 @@ select.form-control option {
         grid-template-columns: 1fr;
     }
     .ai-chat-window {
-        width: calc(100vw - 40px);
-        left: -5px;
+        width: calc(100vw - 30px);
+        left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.6rem;
+    }
+    .time-block {
+        min-width: 44px;
+        padding: 6px 4px;
+    }
+    .time-num {
+        font-size: 1.2rem;
+    }
+    .pillar-container {
+        border-width: 2px;
+    }
+    .pillar-divider {
+        width: 1px;
+        height: 35px;
+    }
+    .hero-stats {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    .stat-divider {
+        width: 50px;
+        height: 1px;
     }
 }
 
@@ -2504,7 +2603,7 @@ select.form-control option {
    PROGRAM PILLARS (LOGOS) SECTION
    =================================================================== */
 .program-pillars-section {
-    padding: 60px 0;
+    padding: 50px 0;
     position: relative;
     z-index: 2;
     background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
@@ -2515,15 +2614,17 @@ select.form-control option {
     align-items: center;
     justify-content: center;
     gap: 3%;
-    flex-wrap: nowrap; /* Ensures they stay side-by-side always */
+    flex-wrap: nowrap;
     width: 100%;
+    max-width: 100%;
 }
 
 .pillar-container {
     position: relative;
-    flex: 1 1 0; /* Grow and shrink equally based on available space */
+    flex: 1 1 0;
+    min-width: 0;
     max-width: 290px;
-    aspect-ratio: 1 / 1; /* Keeps them perfectly circular */
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     border: 5px solid #d4af37;
     box-shadow: 
@@ -2555,29 +2656,13 @@ select.form-control option {
     background-repeat: no-repeat;
 }
 
-/* Responsive cropping: 
-   Left: 0 (shows 1st third), -100% (2nd third), -200% (3rd third) */
-.pillar-1 .pillar-bg { left: 0%; }       /* AI Mastery (Left Logo) */
-.pillar-2 .pillar-bg { left: -100%; }    /* AI Tools (Center Logo) */
-.pillar-3 .pillar-bg { left: -200%; }    /* AI Projects (Right Logo) */
+.pillar-1 .pillar-bg { left: 0%; }
+.pillar-2 .pillar-bg { left: -100%; }
+.pillar-3 .pillar-bg { left: -200%; }
 
 .pillar-divider {
     width: 3px;
-    height: 15vw;
-    max-height: 150px;
+    height: 120px;
     background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.5), transparent);
     border-radius: 50%;
-}
-
-@media (max-width: 768px) {
-    .program-pillars-section {
-        padding: 30px 0;
-    }
-    .pillar-container {
-        border-width: 2px;
-        box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
-    }
-    .pillar-divider {
-        width: 1px;
-    }
 }

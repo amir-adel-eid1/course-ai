@@ -416,7 +416,7 @@ function sendToHRWhatsApp() {
 
 function openDirectWhatsApp() {
     const defaultMsg = 
-`مرحباً مسؤولة الموارد البشرية (HR)، أود الاستفسار وحجز مقعدي في برنامج احتراف الذكاء الاصطناعي مع المهندس أمير عادل عيد (ومحاضرة الجمعة المجانية).`;
+`مرحباً مسؤولة الموارد البشرية (HR)، أود معرفة تفاصيل بخصوص البرنامج.`;
     const waUrl = `https://wa.me/${HR_PHONE}?text=${encodeURIComponent(defaultMsg)}`;
     window.open(waUrl, "_blank");
 }
