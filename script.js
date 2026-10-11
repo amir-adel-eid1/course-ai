@@ -14,62 +14,10 @@ let currentLeadData = null;
 // 1. DOM CONTENT LOADED & INITIALIZATION
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
-    initCountdownTimer();
     initNavbarScroll();
     initMobileNav();
     initFieldTabs();
 });
-
-// ==========================================
-// 2. COUNTDOWN TIMER FOR FREE FRIDAY LECTURE
-// ==========================================
-function initCountdownTimer() {
-    function getNextFriday() {
-        const now = new Date();
-        const nextFriday = new Date();
-        const dayOfWeek = now.getDay(); // 0 is Sunday, 5 is Friday
-        let daysUntilFriday = (5 - dayOfWeek + 7) % 7;
-        
-        // If today is Friday and past 8:00 PM, target next Friday
-        if (daysUntilFriday === 0 && now.getHours() >= 20) {
-            daysUntilFriday = 7;
-        } else if (daysUntilFriday === 0 && now.getHours() < 20) {
-            daysUntilFriday = 0; // Today is Friday before 8 PM
-        }
-
-        nextFriday.setDate(now.getDate() + daysUntilFriday);
-        nextFriday.setHours(20, 0, 0, 0); // 8:00 PM
-        return nextFriday;
-    }
-
-    const targetDate = getNextFriday();
-
-    function update() {
-        const now = new Date().getTime();
-        const difference = targetDate.getTime() - now;
-
-        if (difference <= 0) {
-            document.getElementById("cd-days").textContent = "00";
-            document.getElementById("cd-hours").textContent = "00";
-            document.getElementById("cd-minutes").textContent = "00";
-            document.getElementById("cd-seconds").textContent = "00";
-            return;
-        }
-
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-        document.getElementById("cd-days").textContent = String(days).padStart(2, "0");
-        document.getElementById("cd-hours").textContent = String(hours).padStart(2, "0");
-        document.getElementById("cd-minutes").textContent = String(minutes).padStart(2, "0");
-        document.getElementById("cd-seconds").textContent = String(seconds).padStart(2, "0");
-    }
-
-    update();
-    setInterval(update, 1000);
-}
 
 // ==========================================
 // 3. NAVBAR & MOBILE MENU
@@ -259,15 +207,6 @@ function setFormGoal(type) {
     if (formSec) {
         formSec.scrollIntoView({ behavior: "smooth" });
     }
-
-    if (type === "free_friday") {
-        const radios = document.getElementsByName("bookingType");
-        radios.forEach(r => {
-            if (r.value.includes("محاضرة الجمعة المجانية")) {
-                r.checked = true;
-            }
-        });
-    }
 }
 
 function handleFormSubmit(e) {
@@ -295,7 +234,7 @@ function handleFormSubmit(e) {
     }
 
     const bookingTypeEl = document.querySelector('input[name="bookingType"]:checked');
-    const bookingType = bookingTypeEl ? bookingTypeEl.value : "محاضرة الجمعة المجانية";
+    const bookingType = bookingTypeEl ? bookingTypeEl.value : "البرنامج التدريبي الكامل (المراحل الثلاث)";
     const hasDevice = document.getElementById("hasDevice").value;
     const notes = document.getElementById("notes").value.trim() || "غير محدد";
 
@@ -491,8 +430,8 @@ function processAIResponse(userInput) {
     let reply = "";
 
     if (lower.includes("جمعة") || lower.includes("مجاني") || lower.includes("موعد") || lower.includes("محاضرة")) {
-        reply = `📅 <strong>محاضرة الجمعة المجانية</strong> هي جلسة تفاعلية أونلاين 100% مجانية، الهدف منها إنك تشوف أسلوب التدريب العملي بنفسك وتتعرف على إمكانيات الذكاء الاصطناعي في تخصصك قبل ما تاخد قرارك. 
-        <br><br>👉 تقدر تسجل اسمك فيها فوراً من خلال استمارة الحجز بالموقع أو بدء التواصل مع الـ HR عبر واتساب.`;
+        reply = `✨ باب التسجيل مفتوح حالياً في <strong>البرنامج التدريبي التطبيقي الشامل</strong> (المراحل الثلاث المتكاملة مع أدوات Premium وشهادة معتمدة ومتابعة مستمرة).
+        <br><br>💡 لا توجد حالياً محاضرات مجانية منفصلة. يمكنك حجز مقعدك بالبرنامج مباشرة عبر الاستمارة، أو التواصل مع مسؤولة الـ HR عبر واتساب لأي استفسارات!`;
     } 
     else if (lower.includes("أدوات") || lower.includes("ادوات") || lower.includes("بريميوم") || lower.includes("اشتراك") || lower.includes("premium")) {
         reply = `🔥 <strong>الأدوات مش مجرد شرح نظري!</strong><br>
@@ -515,7 +454,7 @@ function processAIResponse(userInput) {
     } 
     else {
         reply = `أهلاً بك! برنامج الذكاء الاصطناعي مع <strong>م. أمير عادل عيد</strong> مبني على منهجية (Ideas • Design • Automate • Grow). 
-        تقدر تسجل حضورك في <strong>محاضرة الجمعة المجانية</strong> من استمارة الحجز في الصفحة، أو بدء التواصل مع الـ HR عبر واتساب للاستفسار عن أي تفاصيل خاصة بمجالك!`;
+        تقدر تسجل بياناتك في <strong>البرنامج التدريبي الشامل</strong> من استمارة الحجز في الصفحة، أو بدء التواصل مع الـ HR عبر واتساب للاستفسار عن أي تفاصيل خاصة بمجالك!`;
     }
 
     setTimeout(() => {

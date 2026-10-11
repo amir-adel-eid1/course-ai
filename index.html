@@ -6,10 +6,28 @@
     <title>برنامج احتراف الذكاء الاصطناعي الشامل | م. أمير عادل عيد</title>
     <meta name="description" content="البرنامج التدريبي التطبيقي الشامل في الذكاء الاصطناعي - تعلم، طبق، واربط الـAI بمجالك وحقق دخلاً حقيقياً مع أدوات بريميوم وشهادات معتمدة.">
     
-    <!-- Open Graph Meta Tags -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
     <meta property="og:title" content="برنامج احتراف الذكاء الاصطناعي الشامل | م. أمير عادل عيد">
-    <meta property="og:description" content="انضم لأقوى تدريب عملي للذكاء الاصطناعي. احجز مقعدك في المحاضرة المجانية يوم الجمعة!">
-    <meta property="og:image" content="assets/instructor.jpg">
+    <meta property="og:description" content="البرنامج التدريبي التطبيقي الشامل في الذكاء الاصطناعي - تعلم، طبق، واربط الـAI بمجالك وحقق دخلاً حقيقياً مع أدوات بريميوم وشهادات معتمدة.">
+    <meta property="og:image" content="assets/og-image.jpg">
+    <meta property="og:image:secure_url" content="assets/og-image.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="616">
+    <meta property="og:image:alt" content="AMIR ADEL EID - AI Engineer & Creative Technologist">
+    <meta property="og:site_name" content="برنامج احتراف الذكاء الاصطناعي الشامل">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="برنامج احتراف الذكاء الاصطناعي الشامل | م. أمير عادل عيد">
+    <meta name="twitter:description" content="البرنامج التدريبي التطبيقي الشامل في الذكاء الاصطناعي - تعلم، طبق، واربط الـAI بمجالك وحقق دخلاً حقيقياً مع أدوات بريميوم وشهادات معتمدة.">
+    <meta name="twitter:image" content="assets/og-image.jpg">
+    <meta name="twitter:image:alt" content="AMIR ADEL EID - AI Engineer & Creative Technologist">
+    <link rel="image_src" href="assets/og-image.jpg">
     
     <!-- Google Fonts: Cairo & Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,12 +51,12 @@
     <div class="glow-orb orb-3"></div>
     <div class="grid-overlay"></div>
 
-    <!-- Announcement Bar for Free Friday Session -->
+    <!-- Top Announcement Bar -->
     <div class="announcement-bar">
         <div class="container announcement-content">
-            <span class="badge-pulse"><i class="fa-solid fa-sparkles"></i> فرصة استثنائية</span>
-            <p>محاضرة تعريفية وتطبيقية <strong>مجانية 100%</strong> يوم الجمعة القادم - احضر وجرب بنفسك أسلوب التدريب!</p>
-            <a href="#register-section" class="btn-sm-glow">احجز مقعدك المجاني الآن</a>
+            <span class="badge-pulse"><i class="fa-solid fa-sparkles"></i> باب التسجيل مفتوح</span>
+            <p>انضم الآن للدفعة الجديدة من <strong>برنامج احتراف الذكاء الاصطناعي الشامل</strong> - المقاعد محدودة لضمان جودة التطبيق والمتابعة!</p>
+            <a href="#register-section" class="btn-sm-glow">سجل بياناتك الآن</a>
         </div>
     </div>
 
@@ -58,7 +76,6 @@
                 <li><a href="#phases" class="nav-link">مراحل التدريب</a></li>
                 <li><a href="#fields" class="nav-link">تخصصك والـAI</a></li>
                 <li><a href="#premium-tools" class="nav-link">الأدوات البريميوم</a></li>
-                <li><a href="#friday-lecture" class="nav-link special-link">محاضرة الجمعة</a></li>
                 <li><a href="#certificates" class="nav-link">الشهادات والدعم</a></li>
             </ul>
 
@@ -111,8 +128,8 @@
                     <a href="#register-section" class="btn-hero-primary">
                         <i class="fa-solid fa-rocket"></i> احجز مقعدك بالتدريب
                     </a>
-                    <a href="#friday-lecture" class="btn-hero-secondary">
-                        <i class="fa-solid fa-calendar-day"></i> تفاصيل محاضرة الجمعة المجانية
+                    <a href="#phases" class="btn-hero-secondary">
+                        <i class="fa-solid fa-layer-group"></i> استكشف مراحل التدريب
                     </a>
                     <button class="btn-hero-whatsapp" id="heroWhatsAppBtn" onclick="openDirectWhatsApp()">
                         <i class="fa-brands fa-whatsapp"></i> التواصل مع الـ HR
@@ -200,77 +217,6 @@
         </div>
     </section>
 
-    <!-- COUNTDOWN & FREE FRIDAY LECTURE SECTION -->
-    <section class="friday-section" id="friday-lecture">
-        <div class="container">
-            <div class="friday-card">
-                <div class="friday-badge">
-                    <i class="fa-solid fa-gift"></i> فرصة استكشافية حصرية
-                </div>
-                <div class="friday-grid">
-                    <div class="friday-info">
-                        <h2>وعشان مش عايزينك تاخد قرارك لمجرد إعلان...</h2>
-                        <h3 class="highlight-cyan">عملنا محاضرة مجانية 100% يوم الجمعة القادم!</h3>
-                        <p>
-                            تحضر، تتعرف على طريقة التدريب، وتشوف بنفسك المحتوى والأسلوب العملي اللي هنشتغل بيه، 
-                            وتكتشف إمكانيات الذكاء الاصطناعي الحقيقية في تخصصك.. 
-                            <strong>وبعدها تقرر بكل راحة</strong> إذا كنت حابب تكمل البرنامج الكامل أو تختار التخصص الأنسب ليك.
-                        </p>
-
-                        <div class="friday-features">
-                            <div class="friday-feat-item">
-                                <i class="fa-solid fa-video"></i>
-                                <span>محاضرة أونلاين تفاعلية لايف مع م. أمير عادل</span>
-                            </div>
-                            <div class="friday-feat-item">
-                                <i class="fa-solid fa-hand-holding-dollar"></i>
-                                <span>مجانية تماماً بدون أي التزام مسبق</span>
-                            </div>
-                            <div class="friday-feat-item">
-                                <i class="fa-solid fa-clock"></i>
-                                <span>جلسة إجابة على جميع استفسارات المتدربين</span>
-                            </div>
-                        </div>
-
-                        <div class="friday-action-box">
-                            <a href="#register-section" class="btn-friday-action" onclick="setFormGoal('free_friday')">
-                                <i class="fa-solid fa-clipboard-check"></i> سجل اسمك في المحاضرة المجانية الآن
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="countdown-box">
-                        <h4><i class="fa-solid fa-hourglass-half"></i> متبقي على بدء المحاضرة المجانية:</h4>
-                        <div class="countdown-timer" id="countdownTimer">
-                            <div class="time-block">
-                                <span class="time-num" id="cd-days">02</span>
-                                <span class="time-unit">أيام</span>
-                            </div>
-                            <span class="colon">:</span>
-                            <div class="time-block">
-                                <span class="time-num" id="cd-hours">14</span>
-                                <span class="time-unit">ساعات</span>
-                            </div>
-                            <span class="colon">:</span>
-                            <div class="time-block">
-                                <span class="time-num" id="cd-minutes">35</span>
-                                <span class="time-unit">دقائق</span>
-                            </div>
-                            <span class="colon">:</span>
-                            <div class="time-block">
-                                <span class="time-num" id="cd-seconds">48</span>
-                                <span class="time-unit">ثواني</span>
-                            </div>
-                        </div>
-                        <div class="seats-counter">
-                            <i class="fa-solid fa-users"></i>
-                            <span>المقاعد المتاحة مجاناً محدودة لضمان جودة التفاعل والردود!</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ABOUT INSTRUCTOR & PHILOSOPHY -->
     <section class="about-section" id="about">
@@ -575,8 +521,8 @@
                 <div class="form-container-card">
                     <!-- Progress / Notice -->
                     <div class="form-top-alert">
-                        <i class="fa-solid fa-circle-info"></i>
-                        <span>يمكنك اختيار حضور المحاضرة المجانية يوم الجمعة، أو التقدم المباشر للبرنامج الكامل أو كلاهما!</span>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>سجل بياناتك للانضمام المباشر للبرنامج التدريبي الشامل والاستفادة من الأدوات البريميوم والشهادة المعتمدة!</span>
                     </div>
 
                     <form id="aiBookingForm" onsubmit="handleFormSubmit(event)">
@@ -616,7 +562,7 @@
                                     <option value="تصميم وجرافيك وميديا (Design & Media)">تصميم وجرافيك وميديا (Design & Media)</option>
                                     <option value="إدارة أعمال وموارد بشرية (Management & HR)">إدارة أعمال وموارد بشرية (Management & HR)</option>
                                     <option value="صناعة محتوى وكتابة إعلانية (Content Creation)">صناعة محتوى وكتابة إعلانية (Content Creation)</option>
-                                    <option value="تعليم وتدريس وبحث علمي (Education & Academic)">تعليم وتدريس وبحث علمي (Education & Academic)</option>
+                                    <option value="تعليم وتدريس وببحث علمي (Education & Academic)">تعليم وتدريس وبحث علمي (Education & Academic)</option>
                                     <option value="طب وصيدلة ومجال صحي (Healthcare & Medical)">طب وصيدلة ومجال صحي (Healthcare & Medical)</option>
                                     <option value="هندسة وتصميم معماري (Engineering & Architecture)">هندسة وتصميم معماري (Engineering & Architecture)</option>
                                     <option value="طالب جامعي / خريج جديد (Student / Fresh Graduate)">طالب جامعي / خريج جديد (Student / Fresh Graduate)</option>
@@ -635,26 +581,18 @@
                                 <label class="label-heading"><i class="fa-solid fa-ticket"></i> نوع الحجز المطلوب <span class="req">*</span></label>
                                 <div class="booking-options">
                                     <label class="radio-card">
-                                        <input type="radio" name="bookingType" value="محاضرة الجمعة المجانية الاستكشافية" checked>
-                                        <div class="radio-content">
-                                            <div class="radio-title"><i class="fa-solid fa-star"></i> حجز المحاضرة المجانية يوم الجمعة</div>
-                                            <p>أريد حضور المحاضرة الاستكشافية المجانية أولاً للتعرف على طريقة التدريب والمحتوى.</p>
-                                        </div>
-                                    </label>
-
-                                    <label class="radio-card">
-                                        <input type="radio" name="bookingType" value="البرنامج التدريبي الكامل (المراحل الثلاث)">
+                                        <input type="radio" name="bookingType" value="البرنامج التدريبي الكامل (المراحل الثلاث)" checked>
                                         <div class="radio-content">
                                             <div class="radio-title"><i class="fa-solid fa-gem"></i> الانضمام للبرنامج التدريبي الكامل</div>
-                                            <p>أريد الالتحاق المباشر بالبرنامج التدريبي الكامل وحجز الأدوات البريميوم والشهادة.</p>
+                                            <p>حجز مقعد بالبرنامج التدريبي الشامل (3 مراحل مكثفة + أدوات Premium + شهادة معتمدة).</p>
                                         </div>
                                     </label>
 
                                     <label class="radio-card">
-                                        <input type="radio" name="bookingType" value="محاضرة الجمعة + تأكيد أسبقية بالبرنامج الكامل">
+                                        <input type="radio" name="bookingType" value="حجز مقعد واستفسار عبر الـ HR">
                                         <div class="radio-content">
-                                            <div class="radio-title"><i class="fa-solid fa-rocket"></i> كلاهما معاً (الجمعة + أسبقية البرنامج)</div>
-                                            <p>حضور محاضرة الجمعة وتثبيت أسبقية في قائمة المقبولين بالبرنامج الكامل.</p>
+                                            <div class="radio-title"><i class="fa-solid fa-comments"></i> استفسار وحجز مقعد مع الـ HR</div>
+                                            <p>التواصل المباشر مع مسؤولة الـ HR للإجابة عن أسئلتك وتثبيت أسبقية حجزك في الدفعة القادمة.</p>
                                         </div>
                                     </label>
                                 </div>
@@ -754,11 +692,11 @@
                 <div class="chat-message bot-msg">
                     <div class="bubble">
                         أهلاً بك! 👋 أنا المساعد الذكي لبرنامج احتراف الذكاء الاصطناعي مع <strong>م. أمير عادل عيد</strong>. 
-                        أقدر أساعدك في معرفة تفاصيل التدريب، مواعيد محاضرة الجمعة المجانية، الأدوات البريميوم، أو ربطك مباشرة للتواصل مع الـ HR عبر واتساب.
+                        أقدر أساعدك في معرفة تفاصيل التدريب ومراحله، الأدوات البريميوم، أو ربطك مباشرة للتواصل مع الـ HR عبر واتساب.
                     </div>
                 </div>
                 <div class="quick-chips">
-                    <button class="chip-btn" onclick="sendQuickQuestion('ما هي تفاصيل محاضرة الجمعة المجانية؟')">محاضرة الجمعة المجانية؟</button>
+                    <button class="chip-btn" onclick="sendQuickQuestion('ما هي مراحل وتفاصيل التدريب؟')">تفاصيل مراحل التدريب؟</button>
                     <button class="chip-btn" onclick="sendQuickQuestion('ما هي الأدوات البريميوم المتاحة؟')">الأدوات البريميوم؟</button>
                     <button class="chip-btn" onclick="sendQuickQuestion('كيف يفيد التدريب تخصصي؟')">هل التدريب مناسب لمجالي؟</button>
                     <button class="chip-btn" onclick="sendQuickQuestion('أريد التواصل مع الـ HR الآن')">التواصل مع الـ HR</button>
@@ -805,7 +743,7 @@
                 <ul>
                     <li><a href="#about">عن البرنامج والمدرب</a></li>
                     <li><a href="#phases">مراحل التدريب الثلاثة</a></li>
-                    <li><a href="#friday-lecture">محاضرة الجمعة المجانية</a></li>
+                    <li><a href="#fields">تخصصك والذكاء الاصطناعي</a></li>
                     <li><a href="#premium-tools">الأدوات البريميوم</a></li>
                     <li><a href="#register-section">استمارة التسجيل</a></li>
                 </ul>
